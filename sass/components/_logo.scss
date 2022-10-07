@@ -1,0 +1,14 @@
+.logo {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  color: var(--main-headers-color);
+  text-decoration: none;
+
+  &-first-word {
+    color: var(--main-accent-color);
+    transition: color var(--anim-main);
+  }
+}

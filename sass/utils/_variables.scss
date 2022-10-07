@@ -1,0 +1,29 @@
+:root {
+  /* Fonts */
+  --main-font: Roboto, sans-serif;
+  --secondary-font: Raleway, sans-serif;
+
+  /* Text */
+  --main-headers-color: #212121;
+  --main-txt-color: #757575;
+  --main-accent-color: #2196f3;
+  --light-txt-color: #ffffff;
+  --light-footer-links-cl: rgba(255, 255, 255, 0.6);
+  --icons-color: #afb1b8;
+
+  /* Background */
+  background-color: #ffffff;
+  --background-secondary-cl: #2f303a;
+  --background-elements: #f5f4fa;
+  --background-light-cl: #ffffff;
+
+  /* Other */
+  --number-of-gaps-two: 2;
+  --number-of-gaps-three: 3;
+  --number-of-items-three: 3;
+  --number-of-items-four: 4;
+
+  /* Animation */
+  --anim-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* --anim-main: 1500ms cubic-bezier(0.4, 0, 0.2, 1); */
+}

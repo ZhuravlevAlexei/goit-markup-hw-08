@@ -1,0 +1,14 @@
+/* шапка */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  padding-right: 93px;
+  transition: color var(--anim-main);
+}

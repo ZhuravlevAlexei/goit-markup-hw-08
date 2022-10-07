@@ -1,0 +1,220 @@
+/* модальне вікно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: visibility var(--anim-main), opacity var(--anim-main);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  scale: 0.9;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform var(--anim-main);
+}
+
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 528px;
+  height: 581px;
+  background-color: var(--background-light-cl);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--anim-main);
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  background-color: var(--background-light-cl);
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  transition: color var(--anim-main);
+
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+  }
+}
+
+.modal-btn-icon {
+  fill: currentColor;
+}
+
+/*
+   Register form
+*/
+.register-form-title {
+  display: block;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  color: var(--main-headers-color);
+  letter-spacing: 0.03em;
+
+  margin-bottom: 12px;
+}
+
+.register-form-group {
+  margin-bottom: 20px;
+}
+
+.register-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form-field:last-child {
+  margin-bottom: 0;
+}
+
+.register-form-label {
+  display: block;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  margin-bottom: 4px;
+}
+
+.register-form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color var(--anim-main);
+
+  &:focus {
+    border-color: var(--main-accent-color);
+  }
+}
+
+.register-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transition: fill var(--anim-main);
+}
+
+.register-form-input:focus ~ .register-form-icon {
+  fill: var(--main-accent-color);
+}
+
+.register-form-message {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+
+  resize: none;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color var(--anim-main);
+
+  &:focus {
+    border-color: var(--main-accent-color);
+    font-size: 16px;
+    color: var(--main-headers-color);
+  }
+}
+
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.icon-checked {
+  opacity: 0;
+  transition: opacity var(--anim-main);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-checked {
+  opacity: 1;
+}
+
+.icon-unchecked {
+  transition: opacity var(--anim-main);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-unchecked {
+  opacity: 0;
+}
+
+/* Перевірка стану чекбокса перед встановленням стану фокусу сусідньому елементу */
+.register-form-checkbox:focus-visible:not(:checked) + .register-form-icons,
+.register-form-checkbox:focus-visible:checked + .register-form-icons,
+.register-form-checkbox:disabled + .register-form-icons {
+  outline: transparent;
+}
+
+/* Встановлення стану фокусу сусідньому елементу іконці */
+.register-form-checkbox:focus:focus-visible + .register-form-icons {
+  outline: 2px solid var(--main-headers-color);
+  outline-offset: 1px;
+  border-radius: 2px;
+}
+
+.register-form-desc {
+  font-size: 14px;
+  user-select: none;
+}
+
+.register-form-link {
+  color: var(--main-accent-color);
+}
+
+.register-form-btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+}

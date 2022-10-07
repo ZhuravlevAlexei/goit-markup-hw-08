@@ -1,0 +1,115 @@
+.header-nav {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.header-cont-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-cont-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-nav-link {
+  position: relative;
+
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--main-headers-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: color var(--anim-main);
+
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+  }
+
+  &::after {
+    content: '';
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--main-accent-color);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    opacity: 0;
+    transform: scaleX(0);
+    transition: background-color var(--anim-main), transform var(--anim-main),
+      opacity var(--anim-main);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.header-cont-link {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--main-txt-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: color var(--anim-main);
+
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+  }
+}
+
+/* поточна сторінка */
+.current-page {
+  position: relative;
+  color: var(--main-accent-color);
+
+  &::after {
+    content: '';
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--main-accent-color);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    transform: scaleX(1);
+    transition: transform var(--anim-main);
+  }
+}

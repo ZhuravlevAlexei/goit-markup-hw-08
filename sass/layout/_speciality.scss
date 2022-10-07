@@ -1,0 +1,32 @@
+/* секція особливостей */
+.speciality__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.speciality__item {
+  width: 270px;
+  flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
+}
+
+.speciality__title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: var(--main-headers-color);
+}
+
+.speciality__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-size: cover;
+  background-color: var(--background-elements);
+  border-radius: 4px;
+}

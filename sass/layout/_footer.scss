@@ -1,0 +1,145 @@
+/* footer */
+.footer {
+  background-color: var(--background-secondary-cl);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--light-txt-color);
+}
+
+.link-map {
+  color: var(--light-txt-color);
+  text-decoration: none;
+  transition: color var(--anim-main);
+}
+
+.footer-item {
+  margin-bottom: 9px;
+}
+
+.footer-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-link {
+  color: var(--light-footer-links-cl);
+  transition: color var(--anim-main);
+
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+  }
+}
+
+.footer-common {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-addr {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-wecome-socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-welcome {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+
+  text-transform: uppercase;
+  color: var(--light-txt-color);
+  margin-bottom: 20px;
+}
+
+.footer-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--anim-main);
+
+  &:hover,
+  &:focus {
+    color: var(--light-txt-color);
+    background-color: var(--main-accent-color);
+  }
+}
+
+.footer-socials-icon {
+  fill: var(--light-txt-color);
+}
+
+.subscribe-form-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--light-txt-color);
+
+  margin-bottom: 20px;
+}
+
+.subscribe-form-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  height: 50px;
+}
+
+.sub-btn-icon {
+  fill: currentColor;
+}
+
+.subscribe-form-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 18px;
+  font-size: 16px;
+  color: var(--light-txt-color);
+  line-height: calc(20 / 16);
+  outline: transparent;
+  /* background-color: var(--background-secondary-cl); */
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border-color var(--anim-main);
+
+  &:focus {
+    border-color: var(--main-accent-color);
+  }
+}

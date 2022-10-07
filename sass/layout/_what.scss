@@ -1,0 +1,32 @@
+/* секція "чим займаємось" */
+.section-what {
+  padding-top: 0;
+}
+
+.section-what__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.section-what__item {
+  position: relative;
+  /* width: 370px; */
+  flex-basis: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
+}
+
+.section-what__overtext {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: auto;
+
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 27px;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--light-txt-color);
+}
