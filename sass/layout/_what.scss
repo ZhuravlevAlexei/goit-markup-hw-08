@@ -1,32 +1,37 @@
 /* секція "чим займаємось" */
 .section-what {
   padding-top: 0;
-}
+  display: none;
 
-.section-what__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+  @media screen and (min-width: 1200px) {
+    display: block;
 
-.section-what__item {
-  position: relative;
-  /* width: 370px; */
-  flex-basis: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
-}
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
 
-.section-what__overtext {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+    &__item {
+      position: relative;
+      /* width: 370px; */
+      flex-basis: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
+    }
 
-  width: 100%;
-  height: auto;
+    &__overtext {
+      position: absolute;
+      left: 0;
+      bottom: 0;
 
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 27px;
-  background: rgba(47, 48, 58, 0.8);
-  color: var(--light-txt-color);
+      width: 100%;
+      height: auto;
+
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 27px;
+      background: rgba(47, 48, 58, 0.8);
+      color: var(--light-txt-color);
+    }
+  }
 }

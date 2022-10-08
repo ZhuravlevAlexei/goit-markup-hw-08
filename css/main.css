@@ -62,13 +62,23 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 2px solid tomato;
-  outline-offset: -2px; */
+  outline: 2px solid tomato;
+  outline-offset: -2px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 /* reset */
@@ -373,7 +383,6 @@ address {
   padding-top: 200px;
   padding-bottom: 200px;
 }
-
 .hero-title {
   width: 696px;
   margin-left: auto;
@@ -393,25 +402,34 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 30px;
 }
-
-.speciality__item {
-  width: 270px;
-  -ms-flex-preferred-size: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
-      flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
+@media screen and (min-width: 768px) {
+  .speciality__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
-
-.speciality__title {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  text-transform: uppercase;
-  color: var(--main-headers-color);
+@media screen and (min-width: 768px) {
+  .speciality__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / var(--number-of-gaps-two));
+        flex-basis: calc((100% - 30px) / var(--number-of-gaps-two));
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .speciality__item {
+    -ms-flex-preferred-size: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
+        flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
+  }
+}
 .speciality__thumb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,47 +440,63 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   background-size: cover;
   background-color: var(--background-elements);
   border-radius: 4px;
 }
+.speciality__title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--main-headers-color);
+}
+@media screen and (min-width: 768px) {
+  .speciality__title {
+    text-align: left;
+  }
+}
 
 /* секція "чим займаємось" */
 .section-what {
   padding-top: 0;
+  display: none;
 }
-
-.section-what__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
-
-.section-what__item {
-  position: relative;
-  /* width: 370px; */
-  -ms-flex-preferred-size: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
-      flex-basis: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
-}
-
-.section-what__overtext {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 27px;
-  background: rgba(47, 48, 58, 0.8);
-  color: var(--light-txt-color);
+@media screen and (min-width: 1200px) {
+  .section-what {
+    display: block;
+  }
+  .section-what__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+  .section-what__item {
+    position: relative;
+    /* width: 370px; */
+    -ms-flex-preferred-size: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
+        flex-basis: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
+  }
+  .section-what__overtext {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 27px;
+    background: rgba(47, 48, 58, 0.8);
+    color: var(--light-txt-color);
+  }
 }
 
 /* команда */

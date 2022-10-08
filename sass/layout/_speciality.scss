@@ -1,32 +1,56 @@
 /* секція особливостей */
-.speciality__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+.speciality {
 
-.speciality__item {
-  width: 270px;
-  flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
-}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
-.speciality__title {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  text-transform: uppercase;
-  color: var(--main-headers-color);
-}
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
-.speciality__thumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {}
 
-  background-size: cover;
-  background-color: var(--background-elements);
-  border-radius: 4px;
+  }
+
+  &__item {
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / var(--number-of-gaps-two));
+
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
+    }
+  }
+
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+
+    margin-bottom: 30px;
+
+    background-size: cover;
+    background-color: var(--background-elements);
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-headers-color);
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+  }
 }
