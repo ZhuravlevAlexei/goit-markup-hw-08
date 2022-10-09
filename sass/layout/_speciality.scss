@@ -11,14 +11,12 @@
       flex-wrap: wrap;
     }
 
-    @media screen and (min-width: 1200px) {}
-
   }
 
   &__item {
 
     @media screen and (min-width: 768px) {
-      flex-basis: calc((100% - 30px) / var(--number-of-gaps-two));
+      flex-basis: calc((100% - 30px) / var(--number-of-items-two));
 
     }
 

@@ -1,34 +1,49 @@
-/* клієнти */
-.section-clients-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-basis: calc((100% - 30px) / 6);
-  fill: var(--icons-color);
-  cursor: pointer;
-}
+/* Постійні клієнти */
+.section-clients {
 
-.sec-clients-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 92px;
-  border-radius: 4px;
-  border: 1px solid var(--icons-color);
-  color: var(--icons-color);
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 
-  transition: border-color var(--anim-main), color var(--anim-main);
-
-  &:hover,
-  &:focus {
-    color: var(--main-accent-color);
-    border-color: var(--main-accent-color);
+    fill: var(--icons-color);
+    cursor: pointer;
   }
-}
 
-.clients-icons {
-  fill: currentColor;
+  &-item {
+    flex-basis: calc((100% - 30px) / var(--number-of-items-two));
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px * var(--number-of-gaps-two)) / var(--number-of-items-three));
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 30px * var(--number-of-gaps-five)) / var(--number-of-items-six));
+    }
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid var(--icons-color);
+    color: var(--icons-color);
+
+    transition: border-color var(--anim-main), color var(--anim-main);
+
+    &:hover,
+    &:focus {
+      color: var(--main-accent-color);
+      border-color: var(--main-accent-color);
+    }
+  }
+
+  &-icons {
+    fill: currentColor;
+  }
 }
