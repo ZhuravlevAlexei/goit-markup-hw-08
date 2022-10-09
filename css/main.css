@@ -592,6 +592,9 @@ address {
         flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
   }
 }
+.section-team__image {
+  width: 100%;
+}
 .section-team__name {
   font-weight: 500;
   font-size: 16px;
@@ -881,6 +884,11 @@ address {
   width: 100%;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .footer-subscribe-form-label {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-subscribe-form-label {
     width: 358px;
@@ -888,7 +896,7 @@ address {
   }
 }
 .footer-subscribe-form-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 18px;
   font-size: 16px;

@@ -135,6 +135,7 @@
             <li class="section-what__item">
               <img
                 class="section-what__image"
+                srcset="./images/ourworks/img-1@1x.jpg 1x, ./images/ourworks/img-1@2x.jpg 2x"
                 src="./images/ourworks/img-1-squoosh.jpg"
                 alt="Десктопні додатки"
                 title="Десктопні додатки"
@@ -146,6 +147,7 @@
             <li class="section-what__item">
               <img
                 class="section-what__image"
+                srcset="./images/ourworks/img-2@1x.jpg 1x, ./images/ourworks/img-2@2x.jpg 2x"
                 src="./images/ourworks/img-2-squoosh.jpg"
                 alt="Мобільні додатки"
                 title="Мобільні додатки"
@@ -157,6 +159,7 @@
             <li class="section-what__item">
               <img
                 class="section-what__image"
+                srcset="./images/ourworks/img-3@1x.jpg 1x, ./images/ourworks/img-3@2x.jpg 2x"
                 src="./images/ourworks/img-3-squoosh.jpg"
                 alt="Дизайнерські рішення"
                 title="Дизайнерські рішення"
@@ -175,14 +178,44 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="list section-team__list">
             <li class="section-team__item">
-              <img
-                class="section-team__image"
-                src="./images/team/img-demianenko-squoosh.jpg"
-                alt="Ігор Дем'яненко"
-                title="Ігор Дем'яненко"
-                width=""
-                height=""
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/img-demianenko-@1x.jpg 1x,
+                    ./images/team/img-demianenko-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/img-demianenko-@1x.jpg 1x,
+                    ./images/team/img-demianenko-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/img-demianenko-@1x.jpg 1x,
+                    ./images/team/img-demianenko-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <img
+                  class="section-team__image"
+                  src="./images/team/img-demianenko-squoosh.jpg"
+                  alt="Ігор Дем'яненко"
+                  title="Ігор Дем'яненко"
+                  width=""
+                  height=""
+                />
+              </picture>
               <div class="section-team__thumb">
                 <h3 class="section-team__name">Ігор Дем'яненко</h3>
                 <p class="section-team__position">Product Designer</p>
@@ -243,14 +276,34 @@
               </div>
             </li>
             <li class="section-team__item">
-              <img
-                class="section-team__image"
-                src="./images/team/img-repina-squoosh.jpg"
-                alt="Ольга Рєпіна"
-                title="Ольга Рєпіна"
-                width=""
-                height=""
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-repina-@1x.jpg 1x, ./images/team/img-repina-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-repina-@1x.jpg 1x, ./images/team/img-repina-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-repina-@1x.jpg 1x, ./images/team/img-repina-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="section-team__image"
+                  src="./images/team/img-repina-squoosh.jpg"
+                  alt="Ольга Рєпіна"
+                  title="Ольга Рєпіна"
+                  width=""
+                  height=""
+                />
+              </picture>
               <div class="section-team__thumb">
                 <h3 class="section-team__name">Ольга Рєпіна</h3>
                 <p class="section-team__position">Frontend Developer</p>
@@ -311,14 +364,43 @@
               </div>
             </li>
             <li class="section-team__item">
-              <img
-                class="section-team__image"
-                src="./images/team/img-tarasov-squoosh.jpg"
-                alt="Микола Тарасов"
-                title="Микола Тарасов"
-                width=""
-                height=""
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/img-tarasov-@1x.jpg 1x,
+                    ./images/team/img-tarasov-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/img-tarasov-@1x.jpg 1x,
+                    ./images/team/img-tarasov-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/img-tarasov-@1x.jpg 1x,
+                    ./images/team/img-tarasov-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="section-team__image"
+                  src="./images/team/img-tarasov-squoosh.jpg"
+                  alt="Микола Тарасов"
+                  title="Микола Тарасов"
+                  width=""
+                  height=""
+                />
+              </picture>
               <div class="section-team__thumb">
                 <h3 class="section-team__name">Микола Тарасов</h3>
                 <p class="section-team__position">Marketing</p>
@@ -379,14 +461,43 @@
               </div>
             </li>
             <li class="section-team__item">
-              <img
-                class="section-team__image"
-                src="./images/team/img-ermakov-squoosh.jpg"
-                alt="Михайло Єрмаков"
-                title="Михайло Єрмаков"
-                width=""
-                height=""
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/img-ermakov-@1x.jpg 1x,
+                    ./images/team/img-ermakov-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/img-ermakov-@1x.jpg 1x,
+                    ./images/team/img-ermakov-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/img-ermakov-@1x.jpg 1x,
+                    ./images/team/img-ermakov-@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="section-team__image"
+                  src="./images/team/img-ermakov-squoosh.jpg"
+                  alt="Михайло Єрмаков"
+                  title="Михайло Єрмаков"
+                  width=""
+                  height=""
+                />
+              </picture>
               <div class="section-team__thumb">
                 <h3 class="section-team__name">Михайло Єрмаков</h3>
                 <p class="section-team__position">UI Designer</p>
