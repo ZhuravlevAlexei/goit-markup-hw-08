@@ -26,7 +26,7 @@
   </head>
   <body class="page">
     <!--шапка-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <nav class="header-nav">
           <a class="logo header-logo" href="./index.html">
@@ -62,8 +62,19 @@
             >
           </li>
         </ul>
+
+        <button
+          class="menu-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#mobile-menu_8hw"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
 
     <main>
       <!--секція "герой" -->
@@ -179,7 +190,6 @@
           <ul class="list section-team__list">
             <li class="section-team__item">
               <picture>
-                <!-- Desktop screen -->
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -188,7 +198,7 @@
                   "
                   type="image/jpg"
                 />
-                <!-- Tablet screen -->
+
                 <source
                   media="(min-width: 768px)"
                   srcset="
@@ -197,7 +207,7 @@
                   "
                   type="image/jpg"
                 />
-                <!-- Mobile screen -->
+
                 <source
                   media="(max-width: 767px)"
                   srcset="
@@ -277,19 +287,18 @@
             </li>
             <li class="section-team__item">
               <picture>
-                <!-- Desktop screen -->
                 <source
                   media="(min-width: 1200px)"
                   srcset="./images/team/img-repina-@1x.jpg 1x, ./images/team/img-repina-@2x.jpg 2x"
                   type="image/jpg"
                 />
-                <!-- Tablet screen -->
+
                 <source
                   media="(min-width: 768px)"
                   srcset="./images/team/img-repina-@1x.jpg 1x, ./images/team/img-repina-@2x.jpg 2x"
                   type="image/jpg"
                 />
-                <!-- Mobile screen -->
+
                 <source
                   media="(max-width: 767px)"
                   srcset="./images/team/img-repina-@1x.jpg 1x, ./images/team/img-repina-@2x.jpg 2x"
@@ -365,7 +374,6 @@
             </li>
             <li class="section-team__item">
               <picture>
-                <!-- Desktop screen -->
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -374,7 +382,7 @@
                   "
                   type="image/jpg"
                 />
-                <!-- Tablet screen -->
+
                 <source
                   media="(min-width: 768px)"
                   srcset="
@@ -383,7 +391,7 @@
                   "
                   type="image/jpg"
                 />
-                <!-- Mobile screen -->
+
                 <source
                   media="(max-width: 767px)"
                   srcset="
@@ -462,7 +470,6 @@
             </li>
             <li class="section-team__item">
               <picture>
-                <!-- Desktop screen -->
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -471,7 +478,7 @@
                   "
                   type="image/jpg"
                 />
-                <!-- Tablet screen -->
+
                 <source
                   media="(min-width: 768px)"
                   srcset="
@@ -480,7 +487,7 @@
                   "
                   type="image/jpg"
                 />
-                <!-- Mobile screen -->
+
                 <source
                   media="(max-width: 767px)"
                   srcset="
@@ -843,6 +850,98 @@
         </form>
       </div>
     </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-close" width="40" height="40">
+          <use class="menu-icon" href="./images/icons.svg#close_8hw"></use>
+        </svg>
+      </button>
+
+      <ul class="list menu-nav">
+        <li class="menu-nav__item">
+          <a class="menu-nav__link current" href="./index.html">Студія</a>
+        </li>
+        <li class="menu-nav__item">
+          <a class="menu-nav__link" href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="menu-nav__item">
+          <a class="menu-nav__link" href="">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="list menu-cont">
+        <li class="menu-cont__item">
+          <a
+            class="menu-cont__tel"
+            href="tel:+380961111111"
+            target="_blank"
+            rel="noreferrer noopener"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li class="menu-cont__item">
+          <a
+            class="menu-cont__link"
+            href="mailto:info@devstudio.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="list menu-socials">
+        <li class="menu-socials__item">
+          <a
+            class="menu-socials__link"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Instagram"
+            >Instagram</a
+          >
+        </li>
+        <li class="menu-socials__item">
+          <a
+            class="menu-socials__link"
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Twitter"
+            >Twitter</a
+          >
+        </li>
+        <li class="menu-socials__item">
+          <a
+            class="menu-socials__link"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Facebook"
+            >Facebook</a
+          >
+        </li>
+        <li class="menu-socials__item">
+          <a
+            class="menu-socials__link"
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Linkedin"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
 
     <script src="./js/modal.js"></script>
   </body>
