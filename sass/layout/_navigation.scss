@@ -98,7 +98,6 @@
   &-cont-link {
     display: flex;
 
-
     font-weight: 500;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
@@ -110,6 +109,8 @@
     }
 
     @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(16 / 14);
       align-items: center;
       padding-top: 32px;
       padding-bottom: 32px;

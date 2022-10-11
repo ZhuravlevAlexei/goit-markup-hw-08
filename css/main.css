@@ -53,8 +53,14 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* заголовок для всіх секцій */
@@ -332,17 +338,20 @@ address {
   line-height: 1.1666666667;
   letter-spacing: 0.02em;
   color: var(--main-txt-color);
+  text-decoration: none;
 }
 .menu-cont__tel {
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.1764705882;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   color: var(--main-accent-color);
+  text-decoration: none;
 }
 @media screen and (min-width: 480px) {
   .menu-cont__tel {
     font-size: 34px;
+    line-height: 1.1764705882;
   }
 }
 .menu-cont__link:focus, .menu-cont__link:hover {
@@ -372,11 +381,17 @@ address {
 }
 .menu-socials__link {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.2222222222;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--main-accent-color);
+}
+@media screen and (min-width: 480px) {
+  .menu-socials__link {
+    font-size: 18px;
+    line-height: 1.2222222222;
+  }
 }
 
 .current {
@@ -532,6 +547,8 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .header-cont-link {
+    font-size: 14px;
+    line-height: 1.1428571429;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1255,7 +1272,6 @@ address {
   top: 50%;
   left: 50%;
   width: 90%;
-  height: 609px;
   background-color: var(--background-light-cl);
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1444,11 +1460,24 @@ address {
 }
 
 .register-form-desc {
-  font-size: 14px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  font-size: 10px;
+  line-height: 1.2;
+}
+@media screen and (min-width: 480px) {
+  .register-form-desc {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .register-form-desc {
+    font-size: 14px;
+    line-height: 1.1428571429;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
 }
 
 .register-form-link {

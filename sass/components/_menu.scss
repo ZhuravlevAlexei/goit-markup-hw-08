@@ -90,17 +90,20 @@
     line-height: calc(28 / 24);
     letter-spacing: 0.02em;
     color: var(--main-txt-color);
+    text-decoration: none;
   }
 
   &__tel {
     font-weight: 500;
-    font-size: 34px;
-    line-height: calc(40 / 34);
+    font-size: 24px;
+    line-height: calc(28 / 24);
     letter-spacing: 0.02em;
     color: var(--main-accent-color);
+    text-decoration: none;
 
     @media screen and (min-width: 480px) {
       font-size: 34px;
+      line-height: calc(40 / 34);
     }
   }
 
@@ -133,10 +136,15 @@
 
   &__link {
     font-weight: 500;
-    font-size: 18px;
-    line-height: calc(22 / 18);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    @media screen and (min-width: 480px) {
+      font-size: 18px;
+      line-height: calc(22 / 18);
+    }
 
     color: var(--main-accent-color);
   }
